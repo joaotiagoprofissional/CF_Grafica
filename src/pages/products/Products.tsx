@@ -6,7 +6,7 @@ export function Products(){
         <section className='container_products'>
             {cards.map((card)=>(
                 <div className='container_card' key={card.id}>
-                    <img src={card.image} alt={card.name} />
+                    <img src={card.image} alt={card.name} style={{ width: card.width }} />
                     <h3>{card.name}</h3>
                     <span>{card.category}</span>
                     <a href="#">+ Detalhes</a>

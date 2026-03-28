@@ -11,6 +11,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    transition: background-color 0.5s ease;
 }
 
 .menu-nav ul{
@@ -33,4 +34,8 @@
 .menu-nav a{
     text-decoration: none;
     color: #fff;
+}
+
+.scrolled{
+    background-color: #000;
 }

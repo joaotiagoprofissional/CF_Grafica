@@ -1,0 +1,57 @@
+.container-sobre{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-sobre h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1877F2;
+    line-height: 1;
+
+}
+
+.paragraph-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.paragraph-img img{
+    width: 500px;
+    display: block;
+}
+
+.magenta{
+    color: #FF00FF;
+}
+
+.ciano{
+    color: #1877F2;
+}
+
+.amarelo{
+    color: #a8c737;
+}
+
+.magenta, .ciano, .amarelo, i{
+    font-weight: bold;
+}
+
+.img-legend{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-legend p{
+    margin-top: 5px;
+}
+
+.name-author{
+    margin-left: 70%;
+}
+
