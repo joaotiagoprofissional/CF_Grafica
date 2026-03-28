@@ -1,0 +1,17 @@
+import cards from '../../components/cards/Cards'
+import './products.css'
+
+export function Products(){
+    return(
+        <section className='container_products'>
+            {cards.map((card)=>(
+                <div className='container_card' key={card.id}>
+                    <img src={card.image} alt={card.name} />
+                    <h3>{card.name}</h3>
+                    <span>{card.category}</span>
+                    <a href="#">+ Detalhes</a>
+                </div>
+            ))}
+        </section>
+    )
+}
