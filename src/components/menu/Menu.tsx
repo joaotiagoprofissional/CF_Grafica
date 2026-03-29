@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react'
 import { Links } from '../links/Links'
 import './menu.css'
+import { useLocation } from 'react-router-dom'
 
 export function Menu(){
-
     const [ scrolled, setScrolled ] = useState<boolean>(false)
 
+    const location = useLocation()
+
+    const isDetailsPage = location.pathname.startsWith('/detalhes')
+
+    const classNames = ['menu-nav', scrolled && 'scrolled', isDetailsPage && 'menu-dark'].filter(Boolean).join(' ')
     useEffect(() => {
         function handleScroll(){
             if(window.scrollY > 0){
@@ -24,7 +29,7 @@ export function Menu(){
 
     return(
         <header>
-            <nav className={`menu-nav ${scrolled ? 'scrolled' : ''}`} >
+            <nav className={classNames} >
                 <strong>LOGO</strong>
                 <ul>
                     {Links.map((link)=>(

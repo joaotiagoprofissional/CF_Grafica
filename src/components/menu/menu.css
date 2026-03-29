@@ -14,6 +14,15 @@
     transition: background-color 0.5s ease;
 }
 
+.menu-nav.menu-dark{
+    background-color: #000;
+    z-index: 0;
+}
+
+.menu-nav.scrolled:not(.menu-dark){
+    background-color: #000;
+}
+
 .menu-nav ul{
     display: flex;
     justify-content: center;
@@ -34,8 +43,4 @@
 .menu-nav a{
     text-decoration: none;
     color: #fff;
-}
-
-.scrolled{
-    background-color: #000;
 }

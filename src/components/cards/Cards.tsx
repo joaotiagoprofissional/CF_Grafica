@@ -1,9 +1,18 @@
+type Options ={
+    question1: string
+    question2: string
+    image_options1: string
+    image_options2: string
+}
+
 type Card = {
     id: number
     image: string
     name: string
     category: string
+    slug?: string
     width?: string
+    options?: Options
 }
 
 const cards: Card[] = [
@@ -11,8 +20,15 @@ const cards: Card[] = [
         id: 1,
         image:"../../../public/images/perfil_adesivos.png",
         name: "Adesivos",
+        slug: "adesivos",
         category: "Impressão Digital",
-        width: "130px"
+        width: "130px",
+        options : {
+            question1: "Adesivo por folha",
+            question2: "Adesivo por metro",
+            image_options1:"../../../public/images/adesivo_folha.png",
+            image_options2:"../../../public/images/adesivo_metro_impresso.jpg",
+        }
     },
     {
         id: 2,

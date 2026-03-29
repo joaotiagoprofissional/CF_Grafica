@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import cards from '../../components/cards/Cards'
 import './products.css'
 
@@ -9,7 +11,7 @@ export function Products(){
                     <img src={card.image} alt={card.name} style={{ width: card.width }} />
                     <h3>{card.name}</h3>
                     <span>{card.category}</span>
-                    <a href="#">+ Detalhes</a>
+                    <Link to={`/detalhes/${card.id}`}>+ Detalhes</Link>
                 </div>
             ))}
         </section>
