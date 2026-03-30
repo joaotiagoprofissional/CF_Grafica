@@ -1,18 +1,17 @@
-type Options ={
-    question1: string
-    question2: string
-    image_options1: string
-    image_options2: string
+type Choice = {
+        label: string
+        image: string
 }
 
-type Card = {
+export type Card = {
     id: number
     image: string
     name: string
     category: string
     slug?: string
     width?: string
-    options?: Options
+    question?: string
+    choices?: Choice[]
 }
 
 const cards: Card[] = [
@@ -23,12 +22,11 @@ const cards: Card[] = [
         slug: "adesivos",
         category: "Impressão Digital",
         width: "130px",
-        options : {
-            question1: "Adesivo por folha",
-            question2: "Adesivo por metro",
-            image_options1:"../../../public/images/adesivo_folha.png",
-            image_options2:"../../../public/images/adesivo_metro_impresso.jpg",
-        }
+        question: "Qual tipo de adesivo?",
+        choices: [
+            { label: "Adesivo por folha", image:"./../../public/images/adesivo_folha.png" },
+            { label: "Adesivo por metro²", image:"./../../public/images/adesivo_metro_impresso.jpg" }
+        ]
     },
     {
         id: 2,
